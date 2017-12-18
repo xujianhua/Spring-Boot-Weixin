@@ -1,0 +1,34 @@
+debug: false
+
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+    port: 9988
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.github.xujianhua.demo.wechat: DEBUG
+    
+# mysql数据库配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/duduying
+    username: 
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver
+    
+# Mybatis配置
+mybatis:
+    mapperLocations: classpath:mapper/**/*.xml
+    configLocation: classpath:mybatis.xml
+    
+wechat: 
+  mp:
+    appId: 
+    secret: 
+    token: 
+    aesKey: 
